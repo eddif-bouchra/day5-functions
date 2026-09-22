@@ -1,10 +1,8 @@
-
-function makeCounter(){
-    let count = 0
-      return () =>
-        ++count
+let count = 0
+const counter = () => count++
+function makeCounter() {
+  return counter()
 }
-let counter = makeCounter()
-console.log(counter())
-console.log(counter())
-console.log(counter())
+console.log(makeCounter())
+console.log(makeCounter())
+console.log(makeCounter())
